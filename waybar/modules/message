@@ -1,0 +1,8 @@
+#!/bin/bash
+
+message_cnt=$(makoctl list | jq ".data[] | length")
+if [ $message_cnt -gt 0 ]; then
+	echo '{"class":"on_message", "alt":"on_message"}'
+else
+	echo '{"class":"no_message", "alt":"no_message"}'
+fi

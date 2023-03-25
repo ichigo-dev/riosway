@@ -1,0 +1,157 @@
+/*==============================================================================
+	RioSway StatusBar
+==============================================================================*/
+
+*
+{
+	border-radius: 0;
+	font-family: SauceCodePro Nerd Font;
+	font-size: 18px;
+	min-height: 0;
+}
+
+window#waybar
+{
+	background: transparent;
+	color: #d8dee9;
+}
+
+tooltip
+{
+	background: #2e3440;
+	border-radius: 15px;
+	border-width: 2px;
+	border-style: solid;
+	border-color: #2e3440;
+}
+
+#workspaces button
+{
+	padding: 2px 0px;
+	color: #d8dee9;
+	font-weight: bold;
+}
+
+#workspaces button.focused
+{
+	box-shadow: 2px 2px 2px black;
+	color: #2e3440;
+	background-color: #5e81ac;
+	border-radius: 15px;
+}
+
+#workspaces button.urgent
+{
+	color: #24283b;
+	background-color: #7bc275;
+	border-radius: 15px;
+}
+
+#workspaces button:hover
+{
+	color: #2e3440;
+	background-color: #d8dee9;
+	border-radius: 15px;
+}
+
+#workspaces,
+#clock,
+#cpu,
+#memory,
+#network,
+#battery,
+#pulseaudio,
+#language,
+#tray,
+#idle_inhibitor,
+#custom-message,
+#backlight
+{
+	background-color: #2e3440;
+	padding: 4px 14px;
+	margin: 4px 0px;
+}
+
+/*
+	Left
+*/
+#mode
+{
+	background-color: #24283b;
+	padding: 4px 14px;
+	margin: 4px 0px 4px 10px;
+	border-radius: 20px;
+}
+
+/*
+	Center
+*/
+#clock
+{
+	color: #d8dee9;
+	border-radius: 20px;
+	padding: 4px 14px;
+}
+
+/*
+	Right
+*/
+#workspaces
+{
+	margin-left: 10px;
+	border-radius: 20px 0px 0px 20px;
+}
+
+#cpu
+{
+	color: #bf616a;
+}
+
+#memory
+{
+	color: #d08770;
+}
+
+#network
+{
+	color: #ebcb8b;
+}
+
+#battery
+{
+}
+
+#backlight
+{
+}
+
+#idle_inhibitor
+{
+	color: #b48ead;
+}
+
+#battery.charging
+{
+	color: #7bc275;
+}
+
+#battery.warning:not(.charging)
+{
+	background-color: #fcce7b;
+	color: #2a2e38;
+}
+
+#language
+{
+}
+
+#pulseaudio
+{
+	color: #a3be8c;
+}
+
+#tray
+{
+	border-radius: 0 20px 20px 0;
+	margin-right: 10px;
+}

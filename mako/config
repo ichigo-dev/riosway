@@ -1,0 +1,21 @@
+#===============================================================================
+# RioSway Mako
+#===============================================================================
+
+font=SauceCodePro Nerd Font
+width=550
+padding=10
+margin=10
+border-size=2
+border-radius=8
+
+background-color=#2e3440
+border-color=#81a1c1
+text-color=#d8dee9
+
+on-button-middle=exec makoctl menu -n "$id" wofi --dmenu -p 'Select action: '
+on-notify=exec mpv /usr/share/sounds/freedesktop/stereo/message.oga
+
+[urgency=high]
+border-color=#f7768e
+ignore-timeout=1

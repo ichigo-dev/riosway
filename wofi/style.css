@@ -1,0 +1,56 @@
+/*==============================================================================
+	RioSway Launcher
+==============================================================================*/
+
+*
+{
+	font-family: "SauceCodePro Nerd Font";
+	font-size: 20px;
+	font-weight: bold;
+}
+
+window
+{
+	margin: 1px;
+	border: 15px solid #81a1c1;
+	border-radius: 15px 15px 15px 15px;
+}
+
+#input
+{
+	margin: 5px;
+	border-radius: 0px;
+	border: none;
+	background-color: #2e3440;
+	color: #d8dee9;
+}
+
+#inner-box
+{
+	margin: 5px;
+	background-color: #2e3440;
+}
+
+#outer-box
+{
+	margin: 5px;
+	padding: 20px;
+	background-color: #2e3440;
+	border-radius: 15px 15px 15px 15px;
+}
+
+#text
+{
+	margin: 5px;
+	color: #d8dee9;
+}
+
+#entry:selected
+{
+	background-color: #5e81ac;
+}
+
+#text:selected
+{
+	text-decoration-color: #d8dee9;
+}

@@ -5,13 +5,21 @@
 include variables
 include inputs
 include outputs
+include app_confs
+
+exec_always {
+    gsettings set org.gnome.desktop.interface gtk-theme "Adapta-Nokto"
+    gsettings set org.gnome.desktop.interface icon-theme "ePapirus-Dark"
+    gsettings set org.gnome.desktop.interface cursor-theme "Bibata-Modern-Classic"
+    gsettings set org.gnome.desktop.interface font-name "SauceCodePro Nerd Font 14"
+}
 
 
 ################################################################################
 # Config
 ################################################################################
 
-font pango:Inter:style=Regular 12
+font SauceCodePro Nerd Font:Inter:style=Regular 12
 xwayland enable
 
 
@@ -169,8 +177,17 @@ gaps inner 8
 ################################################################################
 
 bar {
-  swaybar_command waybar
+    swaybar_command waybar
 }
+
+exec swayidle -w \
+    timeout 300 "swaylock -f" \
+    timeout 600 "swaymsg 'output * dpms off'" resume "swaymsg 'output * dpms on'" \
+    before-sleep "swaylock -f"
+
+exec gammastep-indicator -m wayland -P -r -l 48.857:2.295
+exec nm-applet --indicator
+exec blueman-applet
 
 exec fcitx5
 exec mako

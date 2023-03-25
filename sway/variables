@@ -15,6 +15,4 @@ set $menu wofi --insensitive --show drun | xargs swaymsg exec --
 set $notice mako
 set $screenshot grim -g "$(slurp)" - | swappy -f -
 set $lock swaylock
-set $exit swaynag -t warning \
-	-m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' \
-	-b 'Yes, exit sway' 'swaymsg exit'
+set $exit waylogout
